@@ -23,7 +23,7 @@
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent black background to the navigation bar */
+      background-color: rgba(0, 0, 0, 0.8); 
       padding: 10px;
       text-align: center;
     }
@@ -35,15 +35,25 @@
     }
 
     .signup-container {
-      background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the form container */
+      background-color: rgba(255, 255, 255, 0.8);
       padding: 20px;
       border-radius: 8px;
       text-align: center;
-      margin: 20px; /* Add some margin to the form container */
-      height: 400px; /* Adjust the height as needed */
+      margin: 20px; 
+      height: 400px; 
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+    }
+
+    .signup-container a {
+     text-decoration: none;
+     color: black;
+    }
+
+    .signup-container p {
+     text-decoration: none;
+     color: blue;
     }
 
     form {
@@ -59,7 +69,7 @@
     }
 
     button {
-      background-color: red; /* Change the color as needed */
+      background-color: red;
       color: white;
       padding: 12px;
       border: none;
@@ -69,7 +79,7 @@
 
     p {
       margin-top: 16px;
-      color: white; /* Change the text color as needed */
+      color: white; 
     }
 
     .flex{
@@ -96,7 +106,7 @@
       <button type="submit">Sign Up</button>
     </form>
 
-    <p>Already have an account?  <a href="/login">Sign in.</a></p>
+    <p>Already have an account?  <a href="funflix-signin.html">Sign in.</a></p>
   </div>
 </div>
 
@@ -125,7 +135,6 @@
     <div>
         <h4>Newsletter</h4>
         <ul>
-            <!-- <li><p>Don't miss out, Stay updated</p></li> -->
             <li><p>Don’t hesitate to subscribe to latest news about Pandovic Scholarship  </p></li>
                 
             <li><input type="email" placeholder="Email Address" class="inputs" id="stuEmail" /></li>
