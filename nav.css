@@ -1,0 +1,32 @@
+nav{
+    background-color: black;
+  }
+
+  .flex{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav-link h3{
+  font-size: 30px;
+  color: red;
+  }
+
+  .flex-2 button {
+    background-color: red; 
+    color: white;
+    border: none;
+    margin: 30px 0px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    padding: 0px 20px;
+  }
+  
+  .flex-2 button:hover {
+    background-color: darkred; /* Change the background color on hover for a visual effect */
+  }
+
+    .flex-2{
+        display: flex;
+        gap: 30px;
+    }

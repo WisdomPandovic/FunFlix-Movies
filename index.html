@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun-Flix Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="flex nav-link">
+            <div><h3>FunFlix</h3></div>
+            <div class="flex-2">
+                <button><p> <h1><a href="funflix-signin.html">Sign in</a></h1></p></button>
+                <button><p><h1><a href="funflix-signup.html">Sign up</a></h1></p></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bk-img">
+        <div class="text-center">
+            <h1>Search millions of movies, TV shows and people to discover. Explore now.</h1>
+            <input type="text" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+    </div>
+    <h2>Action Movies</h2>
+    <div class="movie-list" id="movieList">
+    
+    </div>
+
+    <div class="bk-black">
+        <div class="grid-2 wdth-80">
+            <div><img src="./Images/20221231_154946.jpg" alt=""></div>
+            <div>
+                <h3>Download your favourite shows to watch offline</h3>
+                <p>Save your favorites easily and always have something to watch.</p>
+            </div>
+        </div>
+    </div>
+
+  <h2>Comedy Movies</h2>
+  <div class="movie-list" id="comedyList">
+    <!-- Movie cards will be added here dynamically -->
+  </div>
+
+  <div class="bk-black-2">
+    <div class="grid-two wdth-100">
+        <div>
+            <h3>Get Entertainment</h3>
+            <p>Watch Tom Clancy's Jack Ryan, award-winning Amazon Originals such as The Boys and The 
+                Marvelous Mrs. Maisel, as well as popular movies and TV shows, with all titles available 
+                to download.</p>
+            <button>Start Free Trial</button>
+        </div>
+        <div ><img src="./Images/netflix-s.avif" alt=""></div>
+    </div>
+</div>
+
+  <h2>Most popular movies right Now</h2>
+  <div class="movie-list" id="popular-movieList">
+    <!-- Movie cards will be added here dynamically -->
+  </div>
+
+  <h2>India Movies</h2>
+  <div class="movie-list" id="indian-movieList">
+    <!-- Movie cards will be added here dynamically -->
+  </div>
+
+  <div class="footer-links">
+    <div>
+        <h4>QUICK LINKS</h4>
+        <ul>
+            <li><a href="#"><p>Home</p></a></li>
+            <li><a href="#"><p>Help Center</p></a></li>
+            <li><a href="#"><p>Terms of Use</p></a></li>
+            <li><a href="#"><p>Ways to Watch</p></a></li>
+        </ul>
+    </div>
+    <div>
+        <h4>Follow Us</h4>
+        <ul>
+            <li><p>Follow our Social Media Page. We are live on all social media platforms</p></li>
+            <div class="flex">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </div>
+        </ul>
+    </div>
+    <div>
+        <h4>Newsletter</h4>
+        <ul>
+            <!-- <li><p>Don't miss out, Stay updated</p></li> -->
+            <li><p>Don’t hesitate to subscribe to latest news about FunFlix Movies  </p></li>
+                
+            <li><input type="email" placeholder="Email Address" class="inputs" id="stuEmail" /></li>
+            <li><button id="btn">Submit</button></li>
+        </ul>
+    </div>
+    <div>
+        <h4>Contact Us</h4>
+        <ul>
+            <li><p>Address: Federal Capital Territory, Abuja</p></li>
+            <li><p>Phone: +234 816 482 7520</p></li>
+            <li><p>Email: wisdompandovic@gmail.com</p></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 FunFlix  | All Right Reserved</p>
+    <p>Developed & Maintained by Panda</p>
+   
+</footer>
+
+  <script src="script.js"></script>
+  <script src="comedy-movies.js"></script>
+  <script src="popular-movies.js"></script>
+  <script src="india-movies.js"></script>
+  <script src="config.js"></script>
+    
+</body>
+</html>

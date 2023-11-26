@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Signup</title>
+  <link rel="stylesheet" href="footer2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('./Images/NG-en-20231120-popsignuptwoweeks-perspective_alpha_website_medium.jpg'); /* Replace with the path to your background image */
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .forms{
+        display: flex;
+        justify-content: center;
+      align-items: center;
+      
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent black background to the navigation bar */
+      padding: 10px;
+      text-align: center;
+    }
+
+    header h1 a{
+      text-decoration: none;
+      margin: 0;
+      color: red;
+    }
+
+    .signup-container {
+      background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the form container */
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 20px; /* Add some margin to the form container */
+      height: 400px; /* Adjust the height as needed */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: red; /* Change the color as needed */
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    p {
+      margin-top: 16px;
+      color: white; /* Change the text color as needed */
+    }
+
+    .flex{
+        display: flex;
+        gap: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><a href="index.html">FunFlix</a></h1>
+  </header>
+
+  <div class="forms">
+  <div class="signup-container">
+    <h2>Sign in</h2>
+    
+    <form action="/signup" method="post">
+      <input type="email" id="email" name="email" placeholder="Email" required>
+
+      <input type="password" id="password" name="password" placeholder="Password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p>New to Funflix?  <a href="funflix-signup.html">Sign up now.</a></p>
+  </div>
+</div>
+
+<div class="footer-links">
+    <div>
+        <h4>QUICK LINKS</h4>
+        <ul>
+            <li><a href="#"><p>Home</p></a></li>
+            <li><a href="#"><p>Help Center</p></a></li>
+            <li><a href="#"><p>Terms of Use</p></a></li>
+            <li><a href="#"><p>Ways to Watch</p></a></li>
+        </ul>
+    </div>
+    <div>
+        <h4>Follow Us</h4>
+        <ul>
+            <li><p>Follow our Social Media Page. We are live on all social media platforms</p></li>
+            <div class="flex">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </div>
+        </ul>
+    </div>
+    <div>
+        <h4>Newsletter</h4>
+        <ul>
+            <!-- <li><p>Don't miss out, Stay updated</p></li> -->
+            <li><p>Don’t hesitate to subscribe to latest news about Pandovic Scholarship  </p></li>
+                
+            <li><input type="email" placeholder="Email Address" class="inputs" id="stuEmail" /></li>
+            <li><button id="btn">Submit</button></li>
+        </ul>
+    </div>
+    <div>
+        <h4>Contact Us</h4>
+        <ul>
+            <li><p>Address: Federal Capital Territory, Abuja</p></li>
+            <li><p>Phone: +234 816 482 7520</p></li>
+            <li><p>Email: wisdompandovic@gmail.com</p></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 FunFlix  | All Right Reserved</p>
+    <p>Developed & Maintained by Panda</p>
+   
+</footer>
+
+</body>
+</html>
