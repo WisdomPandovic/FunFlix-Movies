@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-     const apiKey = window.API_KEY;
+     // const apiKey = window.API_KEY;
+     const apiKey = API_KEY;
     const movieList = document.getElementById('movieList');
   
 
