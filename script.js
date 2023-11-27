@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
  // Use the API key from the config file
- const apiKey = config.apiKey;
+ const apiKey = process.env.apiKey;
  const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=28`;
   
 
