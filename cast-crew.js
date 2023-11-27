@@ -1,13 +1,8 @@
-// cast-crew.js
-
-// Function to fetch and display cast and crew details
 function displayCastAndCrew(movieId) {
     const castCrewContainer = document.getElementById('cast-crew');
   
-    // Example API endpoint for fetching credits (cast and crew) from TMDb API
-    const creditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=504b92ed3451d4866b990aff01dad979`;
+    const creditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}`;
   
-    // Fetch data from the TMDb API for credits
     fetch(creditsUrl)
       .then(response => response.json())
       .then(credits => {
@@ -37,7 +32,6 @@ function displayCastAndCrew(movieId) {
       });
   }
   
-  // Function to create a person card element
   function createPersonCard(person) {
     const personElement = document.createElement('div');
     personElement.classList.add('person-card');
@@ -59,6 +53,5 @@ function displayCastAndCrew(movieId) {
     return personElement;
   }
   
-  // Export the function for use in other files if needed
   export { displayCastAndCrew };
   
