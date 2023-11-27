@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
   }
@@ -83,9 +83,6 @@ body {
     .grid-2{
         display: grid;
         grid-template-columns: repeat(1, 1fr) ;
-        gap: 50px;
-        width: 90%;
-        margin: auto;
       }
 
       .footer-links {
