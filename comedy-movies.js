@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const movieList = document.getElementById('comedyList');
   
  const apiKey = config.apiKey;
- const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=28`;
+ const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=35`;
   
     fetch(apiUrl)
       .then(response => response.json())
