@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 function displayCastAndCrew(movieId) {
     const castCrewContainer = document.getElementById('cast-crew');
   
+=======
+
+
+// Function to fetch and display cast and crew details
+function displayCastAndCrew(movieId) {
+    const castCrewContainer = document.getElementById('cast-crew');
+  
+    // Example API endpoint for fetching credits (cast and crew) from TMDb API
+>>>>>>> c311fad29d3b574177fb874de52fdff11dd9116e
     const creditsUrl = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${apiKey}`;
   
     fetch(creditsUrl)

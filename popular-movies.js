@@ -1,47 +1,48 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const movieListContainer = document.getElementById('popular-movieList');
-  
-    const apiKey = config.apiKey;
-    const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
-  
-  
-    fetch(apiUrl)
+    fetch('/api/getApiKey')
       .then(response => response.json())
       .then(data => {
-     
-        if (data.results) {
-        
-          data.results.forEach((movie, index) => {
-            const movieCard = document.createElement('div');
-            movieCard.classList.add('movie-card');
+        const apiKey = data.apiKey;
+        const popularMovieListContainer = document.getElementById('popular-movieList'); 
   
-         
-            const movieLink = document.createElement('a');
-            movieLink.href = `movie-details.html?movie_id=${movie.id}`;
-            movieLink.target = '_blank'; 
+        const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
   
-          
-            const img = document.createElement('img');
-            img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-            img.alt = movie.title;
+        fetch(apiUrl)
+          .then(response => response.json())
+          .then(movieData => {
+            if (movieData.results) {
+              movieData.results.forEach((movie, index) => {
+                const movieCard = document.createElement('div');
+                movieCard.classList.add('movie-card');
   
-          
-            movieLink.appendChild(img);
+                const movieLink = document.createElement('a');
+                movieLink.href = `movie-details.html?movie_id=${movie.id}`;
+                movieLink.target = '_blank';
   
-            const title = document.createElement('h3');
-            title.textContent = movie.title;
+                const img = document.createElement('img');
+                img.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+                img.alt = movie.title;
   
-            movieCard.appendChild(movieLink); 
-            movieCard.appendChild(title);
+                movieLink.appendChild(img);
   
-            movieListContainer.appendChild(movieCard);
+                const title = document.createElement('h3');
+                title.textContent = movie.title;
+  
+                movieCard.appendChild(movieLink);
+                movieCard.appendChild(title);
+  
+                popularMovieListContainer.appendChild(movieCard);
+              });
+            } else {
+              console.error('Error fetching comedy movies: No "results" property in the response');
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching comedy movies:', error);
           });
-        } else {
-          console.error('Error fetching popular movies: No "results" property in the response');
-        }
       })
       .catch(error => {
-        console.error('Error fetching popular movies:', error);
+        console.error('Error fetching API key:', error);
       });
   });
   
