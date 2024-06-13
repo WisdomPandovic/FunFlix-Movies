@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    const currentYear = new Date().getFullYear();
+  document.getElementById('currentYear').textContent = currentYear;
+    
     fetch('/api/getApiKey')
       .then(response => response.json())
       .then(data => {
