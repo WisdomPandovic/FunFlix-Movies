@@ -79,6 +79,10 @@ body {
   color: white;
 }
 
+#currentYear{
+  color: #fff;
+}
+
 @media screen and (max-width: 769px) {
   .grid-2{
     display: grid;
