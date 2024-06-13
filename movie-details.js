@@ -1,6 +1,3 @@
-
-
-
 // document.addEventListener('DOMContentLoaded', function () {
 //     const movieDetailsContainer = document.getElementById('movieDetails');
 
@@ -79,6 +76,10 @@
 // });
 
 document.addEventListener('DOMContentLoaded', function () {
+
+     const currentYear = new Date().getFullYear();
+    document.getElementById('currentYear').textContent = currentYear;
+    
     const movieDetailsContainer = document.getElementById('movieDetails');
 
     const urlParams = new URLSearchParams(window.location.search);
