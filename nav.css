@@ -7,9 +7,13 @@ nav{
     justify-content: space-around;
   }
 
+ .nav-link a{
+    text-decoration: none;
+    color: red;
+  }
+
   .nav-link h3{
   font-size: 30px;
-  color: red;
   }
 
   .flex-2 button {
