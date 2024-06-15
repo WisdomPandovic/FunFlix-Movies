@@ -146,6 +146,33 @@ body {
   display: none;
 }
 
+.similiarMovie-container{
+  width: 50%;
+  margin: auto;
+}
+
+.similar-movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.similar-movie {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.similar-movie h4 {
+  margin-bottom: 10px;
+}
+
+.similar-movie img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (max-width: 769px) {
   .grid-2{
     display: grid;
