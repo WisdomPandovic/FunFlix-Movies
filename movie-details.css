@@ -84,9 +84,13 @@ body {
   color: #fff;
 }
 
-.cast-crew-container{
+.cast-crew-container, .photo-container{
   width: 90%;
   margin: auto;
+}
+
+.cast-crew-container h3, .photo-container h3{
+  text-transform: uppercase;
 }
 
 .cast-crew {
