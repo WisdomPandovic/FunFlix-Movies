@@ -46,6 +46,7 @@ body {
     width: 90%;
     margin: auto;
   }
+
   .movie-details-bk{
     background-image: url('./Images/download.jpg');
     background-size: cover;
@@ -67,7 +68,7 @@ body {
   gap: 10px;
   align-items: center;
   justify-content: center; 
-   margin: 10px 0 20px;
+  margin: 10px 0 20px;
   background-color: #BE123C;
   padding: 15px 40px; 
   border-radius: 5px;
@@ -100,7 +101,7 @@ body {
     white-space: nowrap; 
     scrollbar-width: none;
     -ms-overflow-style: none; 
-    padding: 50px;
+    padding: 10px;
 }
 
 .crew-member {
@@ -130,7 +131,7 @@ body {
   white-space: nowrap;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 50px;
+  padding: 10px;
 }
 
 .photo img {
@@ -153,9 +154,9 @@ body {
 
 .similar-movies {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px;
+  margin: 20px 0;
 }
 
 .similar-movie {
@@ -169,7 +170,8 @@ body {
 }
 
 .similar-movie img {
-  max-width: 100%;
+  max-width: 300px;
+  width: 100%;
   height: auto;
 }
 
@@ -177,6 +179,18 @@ body {
   .grid-2{
     display: grid;
     grid-template-columns: repeat(1, 1fr) ;
+  }
+
+  .similiarMovie-container{
+    width: 80%;
+    margin: auto;
+  }
+
+  .similar-movies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    margin-top: 20px;
   }
 }
 
