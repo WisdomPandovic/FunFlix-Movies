@@ -159,6 +159,11 @@ body {
   margin: 20px 0;
 }
 
+.similar-movies a{
+  text-decoration: none;
+  color: black;
+}
+
 .similar-movie {
   border: 1px solid #ccc;
   padding: 10px;
@@ -167,6 +172,7 @@ body {
 
 .similar-movie h4 {
   margin-bottom: 10px;
+  height: 50px;
 }
 
 .similar-movie img {
