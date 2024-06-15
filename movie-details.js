@@ -196,9 +196,12 @@ function fetchSimilarMovies(apiKey, movieId, similarMoviesContainer) {
         .then(similarData => {
             if (similarData.results && similarData.results.length > 0) {
                 similarData.results.slice(0, 5).forEach(similarMovie => {
-                    const similarMovieDiv = document.createElement('div');
-                    similarMovieDiv.classList.add('similar-movie');
+                    // Create a link element
+                    const movieLink = document.createElement('a');
+                    movieLink.href = `movie-details.html?movie_id=${similarMovie.id}`;
+                    movieLink.classList.add('similar-movie');
 
+                    // Create elements for movie title and image
                     const similarMovieTitle = document.createElement('h4');
                     similarMovieTitle.textContent = similarMovie.title;
 
@@ -209,10 +212,12 @@ function fetchSimilarMovies(apiKey, movieId, similarMoviesContainer) {
                     similarMovieImage.alt = similarMovie.title;
                     similarMovieImage.classList.add('similar-movie-image');
 
-                    similarMovieDiv.appendChild(similarMovieTitle);
-                    similarMovieDiv.appendChild(similarMovieImage);
+                    // Append title and image to link element
+                    movieLink.appendChild(similarMovieTitle);
+                    movieLink.appendChild(similarMovieImage);
 
-                    similarMoviesContainer.appendChild(similarMovieDiv);
+                    // Append link element to container
+                    similarMoviesContainer.appendChild(movieLink);
                 });
             } else {
                 console.error('Error fetching similar movies: No "results" property in the response');
