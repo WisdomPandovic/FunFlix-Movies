@@ -119,6 +119,29 @@ body {
   color: #333;
 }
 
+.movie-photos {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 50px;
+}
+
+.photo img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Hide scrollbar */
+.movie-photos::-webkit-scrollbar,
+.cast-crew::-webkit-scrollbar {
+  display: none;
+}
+
 @media screen and (max-width: 769px) {
   .grid-2{
     display: grid;
