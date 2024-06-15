@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const movieDetailsContainer = document.getElementById('movieDetails');
     const castCrewContainer = document.getElementById('cast-crew');
     const moviePhotosContainer = document.getElementById('movie-photos');
+    const similarMoviesContainer = document.getElementById('similar-movies');
 
     const urlParams = new URLSearchParams(window.location.search);
     const movieId = urlParams.get('movie_id');
@@ -82,6 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // Fetch and display movie photos
                     fetchMoviePhotos(apiKey, movieId, moviePhotosContainer);
+
+                    // Fetch and display similar movies
+                    fetchSimilarMovies(apiKey, movieId, similarMoviesContainer);
                 })
                 .catch(error => {
                     console.error('Error fetching movie details:', error);
@@ -180,5 +184,41 @@ function fetchMoviePhotos(apiKey, movieId, moviePhotosContainer) {
         })
         .catch(error => {
             console.error('Error fetching movie photos:', error);
+        });
+}
+
+// Function to fetch and display similar movies
+function fetchSimilarMovies(apiKey, movieId, similarMoviesContainer) {
+    const similarMoviesUrl = `https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=${apiKey}`;
+
+    fetch(similarMoviesUrl)
+        .then(response => response.json())
+        .then(similarData => {
+            if (similarData.results && similarData.results.length > 0) {
+                similarData.results.slice(0, 5).forEach(similarMovie => {
+                    const similarMovieDiv = document.createElement('div');
+                    similarMovieDiv.classList.add('similar-movie');
+
+                    const similarMovieTitle = document.createElement('h4');
+                    similarMovieTitle.textContent = similarMovie.title;
+
+                    const similarMovieImage = document.createElement('img');
+                    similarMovieImage.src = similarMovie.poster_path
+                        ? `https://image.tmdb.org/t/p/w500${similarMovie.poster_path}`
+                        : 'path/to/your/fallback/image.jpg'; // Set a fallback image URL here
+                    similarMovieImage.alt = similarMovie.title;
+                    similarMovieImage.classList.add('similar-movie-image');
+
+                    similarMovieDiv.appendChild(similarMovieTitle);
+                    similarMovieDiv.appendChild(similarMovieImage);
+
+                    similarMoviesContainer.appendChild(similarMovieDiv);
+                });
+            } else {
+                console.error('Error fetching similar movies: No "results" property in the response');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching similar movies:', error);
         });
 }
