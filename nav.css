@@ -1,52 +1,90 @@
-nav{
-    background-color: black;
-  }
+nav {
+  background-color: black;
+}
 
-  .flex{
-    display: flex;
-    justify-content: space-around;
-  }
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
 
- .nav-link a{
-    text-decoration: none;
-    color: red;
-  }
+.nav-link a {
+  text-decoration: none;
+  color: red;
+}
 
-  .nav-link h3{
+.nav-link h3 {
   font-size: 30px;
+}
+
+.flex-2 button {
+  background-color: red;
+  color: white;
+  border: none;
+  margin: 30px 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0px 20px;
+}
+
+.flex-2 button a {
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.flex-2 button:hover {
+  background-color: darkred;
+}
+
+.flex-2 {
+  display: flex;
+  gap: 30px;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 30px 5px;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: red;
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: black;
+  padding: 10px;
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-bottom: 1px solid red;
+}
+
+@media (max-width: 768px) {
+  .flex-2 {
+    display: none;
   }
 
-  .flex-2 button {
-    background-color: red; 
-    color: white;
-    border: none;
-    margin: 30px 0px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    padding: 0px 20px;
+  .hamburger-menu {
+    display: flex;
   }
+}
 
-  
-  .flex-2 button a{
-    font-size: 15px;
-     color: white;
-     text-decoration: none;
-   }
-  
-  .flex-2 button:hover {
-    background-color: darkred; 
-  }
-
-    .flex-2{
-        display: flex;
-        gap: 30px;
-    }
-
-    @media (max-width: 322px) {
-      
-      .flex-2{
-        display: none;
-     
-    }
-    }
-   
+.mobile-nav.active {
+  display: flex;
+}
