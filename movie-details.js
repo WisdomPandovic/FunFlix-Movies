@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const movieDetailsContainer = document.getElementById('movieDetails');
     const castCrewContainer = document.getElementById('cast-crew');
+    const moviePhotosContainer = document.getElementById('movie-photos');
 
     const urlParams = new URLSearchParams(window.location.search);
     const movieId = urlParams.get('movie_id');
@@ -78,6 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     // Fetch and display cast and crew details
                     fetchCastAndCrewDetails(apiKey, movieId, castCrewContainer);
+
+                    // Fetch and display movie photos
+                    fetchMoviePhotos(apiKey, movieId, moviePhotosContainer);
                 })
                 .catch(error => {
                     console.error('Error fetching movie details:', error);
@@ -148,5 +152,33 @@ function fetchCastAndCrewDetails(apiKey, movieId, castCrewContainer) {
         })
         .catch(error => {
             console.error('Error fetching cast and crew details:', error);
+        });
+}
+
+// Function to fetch and display movie photos
+function fetchMoviePhotos(apiKey, movieId, moviePhotosContainer) {
+    const photosUrl = `https://api.themoviedb.org/3/movie/${movieId}/images?api_key=${apiKey}`;
+
+    fetch(photosUrl)
+        .then(response => response.json())
+        .then(imagesData => {
+            if (imagesData.backdrops) {
+                imagesData.backdrops.forEach(image => {
+                    const imgDiv = document.createElement('div');
+                    imgDiv.classList.add('photo');
+
+                    const img = document.createElement('img');
+                    img.src = `https://image.tmdb.org/t/p/w500${image.file_path}`;
+                    img.alt = 'Movie Photo';
+
+                    imgDiv.appendChild(img);
+                    moviePhotosContainer.appendChild(imgDiv);
+                });
+            } else {
+                console.error('Error fetching movie photos: No "backdrops" property in the response');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching movie photos:', error);
         });
 }
